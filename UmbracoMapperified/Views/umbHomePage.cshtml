@@ -1,0 +1,21 @@
+﻿@model TxtStarter.ViewModels.Pages.HomePageViewModel
+@{
+    Layout = "umbLayout.cshtml";
+}
+@{ Html.RenderPartial("umbHomepageBanner"); }
+<!-- Main -->
+<div id="main-wrapper">
+    <div id="main" class="container">
+        <div class="row">
+            <div class="12u">
+                @Html.Action("FeaturedPages", "UmbTextPage")
+            </div>
+        </div>
+        <div class="row">
+            <div class="12u">
+                @Html.Action("NewsOverviewWidget", "UmbNewsOverview")
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Main -->

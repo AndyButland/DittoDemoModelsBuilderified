@@ -1,0 +1,44 @@
+﻿@model TxtStarter.ViewModels.Partials.NewsOverviewWidgetViewModel
+
+<!-- Blog -->
+<section class="is-blog">
+    <h2 class="major"><span>@Model.Title</span></h2>
+    @if (Model.FeaturedItem != null)
+    {
+        <div>
+            <div class="row">
+                <div class="9u">
+                    <div class="content content-left">
+                        <!-- Featured Post -->
+                        <article class="is-post">
+                            <header>
+                                <h3><a href="@Model.FeaturedItem.Url">@Model.FeaturedItem.Title</a>
+                                </h3>
+                                <span class="byline">@Model.FeaturedItem.SubHeader</span>
+                                <ul class="meta">
+                                    <li class="timestamp">@(Model.FeaturedItem.DateTime.ToString("f"))</li>
+                                </ul>
+                            </header>
+
+                            @if (string.IsNullOrWhiteSpace(Model.FeaturedItem.ImageUrl) == false)
+                            {
+                                <a href="@Model.FeaturedItem.Url" class="image image-full"><img src="@Model.FeaturedItem.ImageUrl" alt=""/></a>
+                            }
+
+                            @Model.FeaturedItem.TruncatedBodyText
+
+                            <a href="@Model.FeaturedItem.Url" class="button">Continue Reading</a>
+                        </article>
+                        <!-- /Featured Post -->
+                    </div>
+                </div>
+                <div class="3u">
+                    <div class="sidebar">
+                        @Html.Action("LatestNewsWidget", "UmbNewsOverview")
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</section>
+<!-- /Blog -->

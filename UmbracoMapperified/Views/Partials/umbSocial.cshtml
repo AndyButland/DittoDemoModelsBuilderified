@@ -1,0 +1,26 @@
+﻿@model TxtStarter.ViewModels.Partials.SocialLinksViewModel
+<!-- Contact -->
+<section>
+    <h2 class="major"><span>Get in touch</span></h2>
+    <ul class="contact">
+        @RenderLinkIfNotEmpty(Model.FacebookLink, "facebook", "Facebook")
+        @RenderLinkIfNotEmpty(Model.TwitterLink, "twitter", "Twitter")
+        @RenderLinkIfNotEmpty(Model.RssLink, "rss", "RSS")
+        @RenderLinkIfNotEmpty(Model.DribbleLink, "dribbble", "Dribbble")
+        @RenderLinkIfNotEmpty(Model.LinkedinLink, "linkedin", "Linked In")
+        @RenderLinkIfNotEmpty(Model.GoogleLink, "googleplus", "Google+")
+    </ul>
+</section>
+<!-- /Contact -->
+
+@helper RenderLinkIfNotEmpty(dynamic link, string cssClass, string linkName)
+{
+    // A helper function is handy when you have to do the same thing over and over again
+    // So now we only have to write the "if" check and list item once, and we only need
+    // to put in the things that can vary
+    
+    if (string.IsNullOrEmpty(link) == false)
+    {
+        <li><a href="@link" class="@cssClass">@linkName</a></li>
+    }
+}

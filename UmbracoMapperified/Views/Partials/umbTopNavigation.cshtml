@@ -1,0 +1,14 @@
+﻿@model TxtStarter.ViewModels.BasePageViewModel
+
+<!-- Nav -->
+<nav id="nav" class="skel-panels-fixed">
+    <ul>
+        @foreach (var link in Model.TopNavigationItems)
+        {
+            <li class="@(link.IsActive ? "current_page_item" : string.Empty)">
+                <a href="@link.Url">@link.Name</a>
+            </li>
+        }
+    </ul>
+</nav>
+<!-- /Nav -->

@@ -1,0 +1,50 @@
+﻿@model TxtStarter.ViewModels.Pages.NewsOverviewPageViewModel
+@{
+    Layout = "umbLayout.cshtml";
+}
+<!-- Main -->
+<div id="main-wrapper">
+    <div id="main" class="container">
+        <div class="row">
+            <div class="12u skel-cell-mainContent">
+                <div class="content">
+                    <!-- Content -->
+                    <article class="is-page-content">
+                        <header>
+                            <h2>@Model.Title</h2>
+                        </header>
+
+                        @foreach (var item in Model.NewsItemsPage.Items)
+                        {                           
+                            <section>
+                                <h3><a href="@item.Url">@item.Title</a></h3>
+                                <span class="byline">@item.SubHeader</span>
+                                <ul class="meta">
+                                    <li class="timestamp">@item.PublishDate.ToString("f")</li>
+                                </ul>
+
+                                @if (string.IsNullOrWhiteSpace(item.ImageUrl) == false)
+                                {
+                                    <a href="@item.Url" class="image image-full"><img src="@item.ImageUrl" alt="" /></a>
+                                }
+
+                                @item.TruncatedBodyText
+
+                                <a href="@item.Url" class="button">Continue Reading</a>
+                            </section>
+                        }
+
+                        @Html.Partial("umbPager", Model.NewsItemsPage)
+                    </article>
+                    <!-- /Content -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="12u">
+                @Html.Action("FeaturedPages", "UmbTextPage")
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Main -->

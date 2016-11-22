@@ -1,0 +1,19 @@
+﻿@model TxtStarter.ViewModels.Pages.HomePageViewModel
+
+@if (Model.HideBanner == false)
+{
+    <!-- Banner -->
+    <div id="banner-wrapper" style="background: url('@Model.BannerBackgroundImageUrl') center center no-repeat;">
+        <section id="banner">
+            <h2>@Model.BannerHeader</h2>
+            <span class="byline">@Model.BannerSubheader</span>
+            
+		    <!-- Only show the banner link if the link isn't empty -->
+			@if (!string.IsNullOrEmpty(Model.BannerLinkUrl))
+			{
+            	<a href="@Model.BannerLinkUrl" class="button">@Model.BannerLinkText</a>
+            }
+        </section>
+    </div>
+    <!-- /Banner -->
+}
