@@ -1,0 +1,20 @@
+﻿@model UmbracoMapperified.Web.ViewModels.Partials.LatestNewsWidgetViewModel
+
+<h2 class="major"><span>Recent Posts</span></h2>
+
+<!-- Archives -->
+<ul class="style2">
+    @foreach (var newsItem in Model.NewsItems)
+    {
+        <li>
+            <article class="is-post-summary">
+                <h3><a href="@newsItem.Url">@newsItem.Title</a></h3>
+                <ul class="meta">
+                    <li class="timestamp">@newsItem.DateTime.ToString("f")</li>
+                </ul>
+            </article>
+        </li>
+    }
+</ul>
+<a href="@Model.NewsOverviewUrl" class="button button-alt">Browse Archives</a>
+<!-- /Archives -->
