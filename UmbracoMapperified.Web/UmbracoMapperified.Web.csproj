@@ -293,6 +293,7 @@
     <Compile Include="Handlers\SocialLinksHandler.cs" />
     <Compile Include="Handlers\TextPageHandler.cs" />
     <Compile Include="Helpers\PublishedContentExtensions.cs" />
+    <Compile Include="Infrastructure\Events\PurgeNavigationCacheOnPublish.cs" />
     <Compile Include="Infrastructure\Handlers\HandlerResolver.cs" />
     <Compile Include="Infrastructure\Handlers\IHandler.cs" />
     <Compile Include="Infrastructure\Handlers\IHandlerResolver.cs" />

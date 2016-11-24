@@ -1,11 +1,13 @@
 ﻿namespace UmbracoMapperified.Web.Handlers
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using UmbracoMapperified.Web.Infrastructure.Handlers;
     using UmbracoMapperified.Web.ViewModels;
     using Umbraco.Core;
     using Umbraco.Core.Models;
+    using Umbraco.Core.Cache;
     using Umbraco.Web;
     using Zone.UmbracoMapper;
 
@@ -31,23 +33,29 @@
                 return;
             }
 
-            MapNavigationItems(source, to);
+            to.TopNavigationItems = ApplicationContext.Current.ApplicationCache.RuntimeCache
+                .GetCacheItem<IList<MenuItem>>($"Navigation_{source.Id}",
+                    () => GetNavigationItems(source), TimeSpan.FromSeconds(60));
+        }
+
+        public class MyObject
+        {
+            
         }
 
         /// <summary>
         /// Helper to map the top level navigation items
         /// </summary>
         /// <param name="source">Current page as <see cref="IPublishedContent"/></param>
-        /// <param name="to">Base page view model to map to</param>
-        private void MapNavigationItems(IPublishedContent source, BasePageViewModel to)
+        /// <returns>Navigation structure</returns>
+        private IList<MenuItem> GetNavigationItems(IPublishedContent source)
         {
             var navItems = new List<MenuItem>();
 
             MapHomePageNavigationItem(navItems);
             MapTopLevelNavigationItems(navItems);
             SetActiveNavItem(source, navItems);
-
-            to.TopNavigationItems = navItems;
+            return navItems;
         }
 
         /// <summary>
