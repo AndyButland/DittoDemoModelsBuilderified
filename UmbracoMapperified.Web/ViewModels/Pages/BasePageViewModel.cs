@@ -1,4 +1,4 @@
-﻿namespace UmbracoMapperified.Web.ViewModels
+﻿namespace UmbracoMapperified.Web.ViewModels.Pages
 {
     using System.Collections.Generic;
     using System.Web;
@@ -6,20 +6,8 @@
 
     public abstract class BasePageViewModel : BaseNodeViewModel
     {
-        private string _title;
-
-        public string Title
-        {
-            get
-            {
-                return string.IsNullOrEmpty(_title) ? Name : _title;
-            }
-
-            set
-            {
-                _title = value;
-            }
-        }
+        [PropertyMapping(SourcePropertiesForCoalescing = new[] { "title", "Name" })]
+        public string Title { get; set; }
 
         [PropertyMapping(MapRecursively = true)]
         public string SiteName { get; set; }

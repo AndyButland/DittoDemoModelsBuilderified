@@ -1,4 +1,4 @@
-﻿namespace TxtStarter.Tests.Handlers
+﻿namespace UmbracoMapperified.Tests.Handlers
 {
     using Moq;
     using Umbraco.Core.Models;

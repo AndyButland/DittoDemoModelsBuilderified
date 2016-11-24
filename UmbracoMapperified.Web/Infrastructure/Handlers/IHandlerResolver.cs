@@ -3,6 +3,7 @@
     using System.Collections.Generic;
     using UmbracoMapperified.Web.ViewModels;
     using Umbraco.Core.Models;
+    using UmbracoMapperified.Web.ViewModels.Pages;
 
     public interface IHandlerResolver
     {

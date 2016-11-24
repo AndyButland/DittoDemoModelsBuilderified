@@ -9,6 +9,7 @@
     using Umbraco.Core.Models;
     using Umbraco.Core.Cache;
     using Umbraco.Web;
+    using UmbracoMapperified.Web.ViewModels.Pages;
     using Zone.UmbracoMapper;
 
     /// <summary>

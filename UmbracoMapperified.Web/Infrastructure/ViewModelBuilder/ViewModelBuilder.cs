@@ -3,6 +3,7 @@ namespace UmbracoMapperified.Web.Infrastructure.ViewModelBuilder
     using UmbracoMapperified.Web.Infrastructure.Handlers;
     using UmbracoMapperified.Web.ViewModels;
     using Umbraco.Core.Models;
+    using UmbracoMapperified.Web.ViewModels.Pages;
 
     public class ViewModelBuilder : IViewModelBuilder
     {

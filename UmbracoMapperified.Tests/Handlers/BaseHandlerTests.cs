@@ -1,4 +1,4 @@
-﻿namespace TxtStarter.Tests.Handlers
+﻿namespace UmbracoMapperified.Tests.Handlers
 {
     using System.Linq;
     using System.Web;

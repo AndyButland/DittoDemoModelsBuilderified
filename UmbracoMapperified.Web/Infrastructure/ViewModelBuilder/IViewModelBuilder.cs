@@ -2,6 +2,7 @@ namespace UmbracoMapperified.Web.Infrastructure.ViewModelBuilder
 {
     using UmbracoMapperified.Web.ViewModels;
     using Umbraco.Core.Models;
+    using UmbracoMapperified.Web.ViewModels.Pages;
 
     /// <summary>
     /// Defines builder methods for instantiating and populating a view model

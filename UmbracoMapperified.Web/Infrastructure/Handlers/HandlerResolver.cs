@@ -4,6 +4,7 @@
     using UmbracoMapperified.Web.Infrastructure.IoC;
     using UmbracoMapperified.Web.ViewModels;
     using Umbraco.Core.Models;
+    using UmbracoMapperified.Web.ViewModels.Pages;
 
     public class HandlerResolver : IHandlerResolver
     {

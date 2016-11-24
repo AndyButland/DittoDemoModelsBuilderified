@@ -6,8 +6,8 @@
     <ProjectGuid>{8B6F41D3-FB0A-4B4F-8F75-E9985D872695}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TxtStarter.Tests</RootNamespace>
-    <AssemblyName>TxtStarter.Tests</AssemblyName>
+    <RootNamespace>UmbracoMapperified.Tests</RootNamespace>
+    <AssemblyName>UmbracoMapperified.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -297,9 +297,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UmbracoMapperified.Web.Ui\UmbracoMapperified.Web.Ui.csproj">
-      <Project>{8c7ac454-37d0-4bdf-80e4-41617530e9d5}</Project>
-      <Name>UmbracoMapperified.Web.Ui</Name>
+    <ProjectReference Include="..\UmbracoMapperified.Web\UmbracoMapperified.Web.csproj">
+      <Project>{f6d7f704-d6fe-47a8-bcb5-4ddf0b136286}</Project>
+      <Name>UmbracoMapperified.Web</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

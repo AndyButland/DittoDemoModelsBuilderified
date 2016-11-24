@@ -1,12 +1,12 @@
-﻿namespace TxtStarter.Tests.Handlers
+﻿namespace UmbracoMapperified.Tests.Handlers
 {
     using System;
     using System.Collections.Generic;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Moq;
-    using TxtStarter.Handlers;
-    using TxtStarter.ViewModels;
-    using TxtStarter.ViewModels.Pages;
+    using UmbracoMapperified.Web.Handlers;
+    using UmbracoMapperified.Web.ViewModels;
+    using UmbracoMapperified.Web.ViewModels.Pages;
     using Umbraco.Core.Models;
     using Zone.UmbracoMapper;
 
