@@ -1,4 +1,3 @@
-### ModeslBuilderified version of the Dittoified version of the TXT starter kit for UmbracoCms
+### UmbracoMapperified version of the ModeslBuilderified version of the Dittoified version of the TXT starter kit for UmbracoCms
 
-More info to come. Please just see the projects and branches if you arrived here
-from my blog or by chance. :)
+For background and explanation please see [here](https://medium.com/@ThisisZone/umbraco-mapper-redux-and-reviewed-6e32323863f0).
